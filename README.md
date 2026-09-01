@@ -27,10 +27,13 @@ Conception d'un script Python autonome s'inspirant d'une œuvre célèbre, puis 
   * **Évolution libre** : Libération des contraintes de grille pour une répartition 100 % hasardeuse des formes sur les axes $x$ et $y$.
   * **Intégration Symfony Headless** : Utilisation du composant `pygame.Surface` combiné à la variable d'environnement `SDL_VIDEODRIVER="dummy"` pour forcer la génération de l'image en mémoire sur le serveur Debian sans affichage graphique.
   Code 1 (figure de base reproductible François Morellet) :
+  
   <img width="251" height="251" alt="image" src="https://github.com/user-attachments/assets/61f9cb18-ed1f-44e0-b2a5-c9e16c79d84f" />
   Code 2 (clown version 2) :
+  
 <img width="355" height="335" alt="image" src="https://github.com/user-attachments/assets/52c5cdb2-77af-41d3-bf24-9080df200754" />
 Code 3 (la version la plus aléatoire et qui va à l’encontre de François Morellet) :
+
 <img width="336" height="337" alt="image" src="https://github.com/user-attachments/assets/5dae516d-ebd1-44c2-ba04-377594574d30" />
 
 
@@ -42,6 +45,20 @@ Déploiement d'un service de stockage réseau centralisé (SMB/CIFS) avec gestio
   * Migration d'une approche de configuration manuelle vers une solution **entièrement conteneurisée et automatisée** (`docker-compose.yml`).
   * Mise en place d'une matrice de droits stricte : répertoires personnels isolés, répertoires partagés par groupe et zone publique en lecture seule.
   * Résolution de contraintes d'isolation réseau inter-conteneurs et tests de validation croisés via CLI (`smbclient`) et GUI (`cifs`).
+Groupes moi, toi, nous :
+
+<img width="727" height="287" alt="image" src="https://github.com/user-attachments/assets/21124f82-b92f-4e4a-b2b7-9559fa1a1eea" />
+
+Utilisation du fichier SMB.CONF : 
+
+<img width="625" height="642" alt="image" src="https://github.com/user-attachments/assets/6fa309f8-8a7c-4efb-a1b2-065ca6820d2d" />
+
+Réalisation des différents test de groupes et d'utilisateur par interface graphique et CLI : 
+
+<img width="750" height="580" alt="image" src="https://github.com/user-attachments/assets/4010eb6b-fbf1-48fe-bc3d-10fa7ce26394" />
+
+<img width="742" height="405" alt="image" src="https://github.com/user-attachments/assets/f5d36ee7-8a5e-4e06-8a81-83a8903af950" />
+
 
 ---
 
