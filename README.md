@@ -92,8 +92,4 @@ Test des appels entre les différentes heures et les artistes de la boite :
 
 
 PS : les photos que je mets son des preuves de mes configurations je vous laisse aller voir en détail mes travaux !
-
-
-
-
 ---
