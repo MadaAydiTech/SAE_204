@@ -1,0 +1,64 @@
+# docker-compose.yml - SAÉ2.04-3 Q14
+# Adam ABIDERRAHMANE
+#
+# Je me suis basé sur l'exemple officiel de la page GitHub de dperson/samba :
+# https://github.com/dperson/samba
+# Je peux démarrer samba et les utilisateurs en une seule commande !
+
+version: '3.4'
+
+services:
+  samba:
+    #J'y construis l'image à partir du Dockerfile présent dans le dossier courant
+    build: .
+    container_name: samba-q14
+
+    environment:
+      TZ: 'Europe/Paris'
+
+    #Ports qu'on a besoin au protocole SMB :
+    #137/138 UDP: pour la résolution de noms NetBIOS
+    #139 TCP: session NetBIOS
+    #445 TCP: SMB
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      - "445:445/tcp"
+
+    #Système de fichiers du conteneur est en lecture seule on peut pas modifier le conteneur de l'intérieur comme expliqué dans mon compte rendu
+    read_only: true
+
+    #Le dossier /tmp doit rester accessible en écriture
+    tmpfs:
+      - /tmp
+
+    #Je fais redémarrer le conteneur sauf si je l'éteins manuellement
+    restart: unless-stopped
+
+    #Je le rends interactif je l'ai trouvé sur dperson via github
+    stdin_open: true
+    tty: true
+
+    #Montage du dossier partage pour la persistance
+    volumes:
+      - /partage:/partage:z
+
+    # j'explique ce que j'ai mis dedans, je reprends la même commande que celle quifonctionnait déjà à la question 13 en docker run, je la réutilise telle quelle ici :
+    #-S:désactive NetBIOS (mode SMB moderne uniquement)
+    #-n: désactive la résolution de noms NetBIOS
+    #-w: nom du groupe de travail (workgroup)
+    #-p: active la vérification de la force des mots de passe
+    #-u "u;pass": crée un utilisateur Samba avec son mot de passe
+    #-s "nom;chemin;browsable;readonly;guest;users" : crée un partage
+    command: >
+      -S -n -w "WORKGROUP" -p
+      -u "moi;Moi12345"
+      -u "toi;Toi12345"
+      -u "nous;Nous1234"
+      -s "public;/partage/public;yes;no;yes"
+      -s "amoi;/partage/amoi;no;no;no;moi"
+      -s "atoi;/partage/atoi;no;no;no;toi"
+      -s "anous;/partage/anous;no;no;no;nous"
+      -s "amoi-atoi;/partage/amoi-atoi;no;no;no;moi"
+      -s "amoi-anous;/partage/amoi-anous;no;no;no;moi"

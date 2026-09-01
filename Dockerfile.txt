@@ -1,0 +1,12 @@
+#Je pars de l'image dperson/samba, celle que j'ai déjà utilisée à la question 13 :
+FROM dperson/samba
+
+#Je mets le fuseau horaire sur Paris
+ENV TZ=Europe/Paris
+
+# je crée direct tous les dossiers de partage dans l'image
+# comme ça je n'ai pas à les recréer à la main à chaque fois que je relance le conteneur
+RUN mkdir -p /partage/public /partage/amoi /partage/atoi \
+    /partage/anous /partage/amoi-atoi /partage/amoi-anous
+
+#Je ne mets pas les utilisateurs et les partages ici, je les passe dans le docker-compose.yml
