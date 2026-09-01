@@ -62,7 +62,7 @@ Réalisation des différents test de groupes et d'utilisateur par interface grap
 
 ---
 
-### Partie 4 Téléphonie sur IP (IPBX Asterisk et utilisation du cloud AWS)
+### Partie 4 Téléphonie sur IP (IPBX Asterisk, utilisation du cloud AWS, test sur MizuDROID application installé via play store, entrée en SSH)
 Conception et déploiement de l'infrastructure téléphonique VoIP complète pour un atelier d'artistes.
 * **Stack technique** : FreePBX (Asterisk), Protocoles SIP, Softphones (microSIP).
 * **Architecture & Règles métier** :
@@ -70,4 +70,30 @@ Conception et déploiement de l'infrastructure téléphonique VoIP complète pou
   * **Serveur Vocal Interactif (SVI / IVR)** : Routage des appels entrants via menu à touches depuis le numéro principal (`0466666666`).
   * **Conditions Temporelles (Time Conditions)** : Gestion des plages horaires (08h-18h, 7j/7), des nuits et de la fermeture annuelle (juillet-août) avec diffusion d'annonces vocales adaptées.
   * **Messagerie vocale** : Redirection automatique des appels vers la boîte vocale en cas d'absence du destinataire.
+  Utilisation AWS : 
+
+  <img width="730" height="665" alt="image" src="https://github.com/user-attachments/assets/e6293383-e18b-4be5-b129-e24a7e65f22d" />
+
+Utilisation d'Asterisk : 
+
+<img width="750" height="261" alt="image" src="https://github.com/user-attachments/assets/8a98c4a6-158c-460e-95bb-3da4b8b15f28" />
+
+Configuration des Arsites avec leurs numéro attribué (dans les fichiers attribué évidement) : 
+
+<img width="752" height="230" alt="image" src="https://github.com/user-attachments/assets/b8f1f30d-755e-412d-a902-96005e845562" />
+
+Test des appels entre les différentes heures et les artistes de la boite : 
+
+<img width="257" height="452" alt="image" src="https://github.com/user-attachments/assets/20056d95-2e42-4c50-ba3d-cf631632aab0" />
+
+<img width="252" height="541" alt="image" src="https://github.com/user-attachments/assets/fe748129-b66e-4760-81cc-56089e272fc1" />
+
+<img width="335" height="811" alt="image" src="https://github.com/user-attachments/assets/6aa5f5cd-cc04-477c-9e5f-ad368cc85973" />
+
+
+PS : les photos que je mets son des preuves de mes configurations je vous laisse aller voir en détail mes travaux !
+
+
+
+
 ---
