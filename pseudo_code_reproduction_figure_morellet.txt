@@ -1,0 +1,21 @@
+import pygame
+import random
+Initialiser pygame
+
+Créer fenêtre 4000×4000
+Titre : "Répartition aléatoire du rouge au jaune en suivant progression"
+Définir taille d'un grand carré = 100 pixels
+(4000 ÷ 100 = 40 cases, même proportion que l'original)
+Faire liste de 4 couleurs = [jaune, rouge, orange, marron]
+Pour chaque ligne de la grille (4000 ÷ 100 = 40 lignes) :
+    Pour chaque colonne de la grille (4000 ÷ 100 = 40 colonnes) :
+        Si colonne paire ET ligne paire (0, 2, 4, 6...) :
+            Choisir couleur au hasard dans la liste
+            x = colonne × 100
+            y = ligne × 100
+            Dessiner un carré (x, y, 100, 100)
+Afficher toute la fenêtre
+Boucle infinie pour que la fenêtre reste ouverte :
+    Récupérer les actions (clic souris, etc.)
+    Si clic sur croix : fermer la fenêtre
+Quitter pygame

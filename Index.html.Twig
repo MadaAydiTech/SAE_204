@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art mathématique{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Paramètres :</h1>
+    <!-- C'est grâce à l'attribut name que l'on peut récupérer la valeur associée dans symfony -->
+    <form method="post" action="/calculer">
+    <div>
+        <label for="hasard" class="form-label">Amplitude du Hasard(0 jusqu'à 1)</label>
+            <input type="number" min="0" max="1" step="0.01" id="hasard" name="hasard" value="0.75">
+    </div>
+      <div>
+            <label class="form-label">Hasard de l'angle (0 jusqu'à 1)</label>
+                <input type="number" min="0" max="1" step="0.01" name="hasardangle" value="0.5">
+        </div>
+      <div>
+        <label class="form-label">Le nombre de colonnes</label>
+            <input type="number" min="1" max="20" name="nbcolonnes" value="8">
+        </div>
+      <div>
+            <label class="form-label">Le nombre de lignes</label>
+        <input type="number" min="1" max="20" name="nblignes" value="10">
+        </div>
+      <div>
+        <label class="form-label">Dimension de koch c'est son seul parametre</label>
+            <input type="range" class="form-range" min="0" max="6" step="1" name="dimension">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" name="calculer" value="nees">Calculer Nees</button>
+            <button type="submit" class="btn btn-primary" name="calculer" value="koch">Calculer Koch</button>
+<button type="submit" class="btn btn-primary" name="calculer" value="morellet">ma diff Morellet </button>
+            <button type="submit" class="btn btn-danger" name="imprimer" value="1">Imprimer</button>
+        </div>
+    </form>
+
+    <h1> Résultat : </h1>
+    <img src="{{fichier}}" width="100%">
+</div>
+{% endblock %}
