@@ -14,6 +14,27 @@ Développement d'une application web dynamique permettant de générer et d'affi
   * Traitement dynamique des formulaires HTML (transmission de paramètres comme le hasard ou encore la grille de ma figure).
   * Sécurisation de l'accès au site via authentification HTTP Basic (`.htaccess` / `.htpasswd`).
   * Gestion du rendu dynamique d'images dans les vues Twig.
+  
+Utilisation de machine virtuel DEBIAN pour utiliser le serveur web et l'adapter : 
+
+<img width="641" height="472" alt="image" src="https://github.com/user-attachments/assets/c6c0e1b9-a83d-413d-a40a-b0cecbdd46d4" />
+
+Création du site et serveur web : 
+
+<img width="605" height="395" alt="image" src="https://github.com/user-attachments/assets/24848a41-aaf4-453a-98ca-c21738cc95ba" />
+
+Mise en place des différentes figures  : 
+
+<img width="636" height="442" alt="image" src="https://github.com/user-attachments/assets/178d9424-e132-4c77-89a1-80a7dff476b7" />
+
+<img width="757" height="700" alt="image" src="https://github.com/user-attachments/assets/26366980-1fb0-4937-9f69-fca3f26b4b42" />
+
+
+Modification des fichiers python pour l'adapter au site les faire afficher : 
+
+<img width="751" height="367" alt="image" src="https://github.com/user-attachments/assets/ca6881be-7aa8-41ad-8433-ad63b0c0f5a8" />
+
+<img width="612" height="552" alt="image" src="https://github.com/user-attachments/assets/60138678-5e9e-4c1b-9f34-b2dd91192fb9" />
 
 ---
 ### Partie 2 Script Python & Art Mathématique : François Morellet
